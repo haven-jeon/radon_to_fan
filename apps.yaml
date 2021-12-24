@@ -1,0 +1,9 @@
+radon_ctl:
+  module: radonctl
+  class: RemoveRadon
+  radon_sensor: sensor.airthings_radon_1day_avg
+  entity_to_control: fan.hwanpunggi
+  min: 20
+  max: 80
+  dryrun: on
+  on_speed: high
