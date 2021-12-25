@@ -5,5 +5,6 @@ radon_ctl:
   entity_to_control: fan.hwanpunggi
   min: 20
   max: 80
-  dryrun: on
+  dryrun: off
   on_speed: high
+

@@ -19,10 +19,11 @@ class RemoveRadon(hass.Hass):
     def radon_change(self, entity, attribute, old, new, kwargs):
         if float(new) > float(self.args['max']):
             self.log("Radon value is just over {} turn on {}".format(self.args['max'], self.args["entity_to_control"]))
-            if self.args['dryrun'] != 'on':
+            self.log(f"dryrun value {self.args['dryrun']}")
+            if self.args['dryrun'] == False:
                 self.turn_on(self.args["entity_to_control"], speed=self.args['on_speed'])
         elif float(new) < float(self.args['min']):
             self.log("Radon value is just below {} turn off {}".format(self.args['min'], self.args["entity_to_control"]))
-            if self.args['dryrun'] != 'on':
+            if self.args['dryrun'] == False:
                 self.turn_off(self.args["entity_to_control"], speed='off')
         
