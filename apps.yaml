@@ -4,7 +4,6 @@ radon_ctl:
   radon_sensor: sensor.airthings_radon_1day_avg
   entity_to_control: fan.hwanpunggi
   min: 20
-  max: 80
+  max: 70
   dryrun: off
   on_speed: high
-
